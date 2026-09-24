@@ -1,0 +1,19 @@
+{
+  "name": "instancia-evaluativa-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "twcss": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "twcssnd": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./src/input.css -o ./src/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
