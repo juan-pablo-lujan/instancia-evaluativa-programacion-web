@@ -27,8 +27,6 @@ function aplicarEstadoError(input, elementoError, mensaje, hayError) {
   }
 }
 
-
-// validar el formulario
 function validarFormulario() {
   const nombreInput = document.getElementById("nombre");
   const edadInput = document.getElementById("edad");
@@ -44,15 +42,12 @@ function validarFormulario() {
   const password = passwordInput.value;
   const passwordConfirm = passwordConfirmInput.value;
 
-  // regex
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const regexTelefono = /^[0-9]{8,15}$/;
   const regexPassword = /^(?=.*[A-Z])(?=.*\.).{6,}$/;
 
-  // longitud del nombre
   const nombreValido = nombre !== "" && nombre.length >= 2;
-  
-  // validacion edad
+
   const numEdad = Number(edad);
   const edadValida = edad !== "" && !isNaN(numEdad) && numEdad > 0 && numEdad <= 110;
 
@@ -128,7 +123,7 @@ function validarFormulario() {
 }
 
 
-// EVENTOS Y TABLA
+// evento para escuchar cualquier cambio de input del formulario
 formulario.addEventListener("input", validarFormulario);
 
 // mostrar / ocultar contraseña
@@ -139,7 +134,6 @@ checkVerPassword.addEventListener("change", function () {
   document.getElementById("passwordConfirm").type = tipo;
 });
 
-// renderizar tabla
 function renderizarTabla() {
   tbodyUsuarios.innerHTML = "";
 
@@ -161,7 +155,7 @@ function renderizarTabla() {
   });
 }
 
-// envio de formulario
+// evento para escuchar envio de formulario
 formulario.addEventListener("submit", function (evento) {
   evento.preventDefault();
 

@@ -20,7 +20,7 @@ export default class Usuario {
   static crear(nombre, edad, email, telefono, activo, password) {
     return new Usuario(nombre, edad, email, telefono, activo, password);
   }
-
+  //metodo para compara el valor internamente, sin exponer la prop privada (encapsulamiento)
   validarPassword(pass) {
     return this.#password === pass;
   }
