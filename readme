@@ -57,6 +57,24 @@ El proyecto implementa un flujo completo de alta de usuarios aplicando los sigui
 
 ---
 
+## Scripts disponibles
+
+El proyecto utiliza Tailwind CSS para aplicar los estilos de la interfaz. Para facilitar la generación automática de los estilos, se configuraron los siguientes scripts en package.json:
+
+* "npm run twcss": inicia Tailwind CSS utilizando la CLI mediante npx. Genera el archivo src/output.css a partir de src/input.css y permanece observando los cambios realizados en el proyecto.
+
+* "npm run twcssnd": realiza la misma tarea, pero ejecuta directamente el archivo de la CLI de Tailwind CSS mediante Node.js. Este script se agregó como alternativa para solucionar problemas de ejecución de la CLI mediante npx.
+
+Para iniciar Tailwind CSS durante el desarrollo se puede ejecutar:
+
+```bash
+npm run twcss
+```
+
+Una vez iniciado, Tailwind CSS queda en modo watch, detectando los cambios realizados y actualizando automáticamente src/output.css.
+
+---
+
 ## Estructura del Proyecto
 
 ```text
