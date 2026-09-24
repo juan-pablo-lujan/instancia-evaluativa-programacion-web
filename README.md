@@ -7,7 +7,7 @@ Aplicación web desarrollada para la gestión, validación y renderizado dinámi
 * Mauricio Merlo
 * Luisina Cenitagoya Suarez
 * Juan Pablo Luján
-* Seba
+* Sebastián Reinhart
 ---
 
 ## Cómo Ejecutar el Proyecto
@@ -19,13 +19,20 @@ Para visualizar y probar la aplicación en tu navegador de forma local, se recom
 2. Abrir el proyecto:
 Abre la carpeta raíz del proyecto en Visual Studio Code.
 
-3. Instalar Live Server (si no la tienes):
+3. Instalar las dependencias:
+
+Desde la terminal, ubicándose en la carpeta raíz del proyecto, ejecutar:
+``` bash
+npm install
+```
+
+5. Instalar Live Server (si no la tienes):
 
 Ve a la pestaña de Extensiones en VS Code (Ctrl + Shift + X o Cmd + Shift + X en Mac).
 
 Busca Live Server (desarrollada por Ritwick Dey) e instálala.
 
-4. Iniciar la aplicación:
+6. Iniciar la aplicación:
 
 Abre el archivo index.html.
 
@@ -57,13 +64,25 @@ El proyecto implementa un flujo completo de alta de usuarios aplicando los sigui
 
 ---
 
+## Tecnologías utilizadas
+
+- HTML5
+- JavaScript ES6+
+- Programación Orientada a Objetos (POO)
+- TailwindCSS
+- Node.js
+- npm
+- Módulos ES6 (`import` / `export`)
+
+---
+
 ## Scripts disponibles
 
 El proyecto utiliza Tailwind CSS para aplicar los estilos de la interfaz. Para facilitar la generación automática de los estilos, se configuraron los siguientes scripts en package.json:
 
 * "npm run twcss": inicia Tailwind CSS utilizando la CLI mediante npx. Genera el archivo src/output.css a partir de src/input.css y permanece observando los cambios realizados en el proyecto.
 
-* "npm run twcssnd": realiza la misma tarea, pero ejecuta directamente el archivo de la CLI de Tailwind CSS mediante Node.js. Este script se agregó como alternativa para solucionar problemas de ejecución de la CLI mediante npx.
+* "npm run twcssnd": alternativa para iniciar Tailwind CSS ejecutando directamente su CLI mediante Node.js.
 
 Para iniciar Tailwind CSS durante el desarrollo se puede ejecutar:
 
@@ -80,10 +99,15 @@ Una vez iniciado, Tailwind CSS queda en modo watch, detectando los cambios reali
 ```text
 ├── classes/
 │   └── Usuario.js
+│
 ├── src/
-│   └── output.css       # Estilos compilados de TailwindCSS
+│   ├── input.css
+│   └── output.css
+│
 ├── index.html
 ├── index.js
+├── package.json
+├── package-lock.json
 └── README.md
 ```
 ---
